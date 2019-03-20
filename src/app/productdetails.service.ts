@@ -19,7 +19,7 @@ export class ProductdetailsService {
   // }
 
   fetchData():Observable<any>{
-    return  this.http.get("http://10.117.189.228:9595/product/group");
+    return  this.http.get("http://13.232.210.72:9596/product/group");
   }
   
 

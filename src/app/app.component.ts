@@ -13,7 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class AppComponent  implements OnInit {
 
   constructor(private data:ProductdetailsService, private route:ActivatedRoute,private httpss: HttpClient, private router: Router ) {}
-public url =`http://localhost:4200/`;
+
 result;
   ngOnInit(){
     this.data.fetchData().subscribe(data=> this.result=data);
@@ -24,7 +24,7 @@ result;
   details(){
     //console.log(data);
    // this.data.fetchData().subscribe(data=> this.result=data);
-    this.httpss.get("http://10.117.189.228:9595/product/group").subscribe((res:Response) => {
+    this.httpss.get("http://13.232.210.72:9596/product/group").subscribe((res:Response) => {
       console.log(res);
      // this.isAdded = true;
     // window.location.href=`${this.url}details`;
