@@ -28,4 +28,10 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to INGProductGroups!');
   });
+  // it('should render productGroupName in a h4 tag', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('h4').textContent).toContain('productGroupName');
+  // });
 });

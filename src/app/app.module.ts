@@ -3,16 +3,17 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './details/details.component';
+import { ProductdetailsService } from './productdetails.service';
 
 
 
-const appRoutes:Routes = [
+const appRoutes: Routes = [
   {
-    path:'details',
+    path: 'details',
     component: DetailsComponent
-  
+
   }
 
 ]
@@ -22,16 +23,16 @@ const appRoutes:Routes = [
   declarations: [
     AppComponent,
     DetailsComponent
-    ],
+  ],
 
   imports: [
-  RouterModule.forRoot(appRoutes),
-  BrowserModule,
-  HttpClientModule,
-  FormsModule
+    RouterModule.forRoot(appRoutes),
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ProductdetailsService],
+  bootstrap: [AppComponent ]
 })
 
 export class AppModule { }
